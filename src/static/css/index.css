@@ -1,0 +1,31 @@
+/* Basic theming */
+
+body {
+  font-family: "Tomorrow", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Press Start 2P", cursive !important;
+}
+
+.gangsta-button {
+  border: 3px solid #47d147 !important;
+  background: white !important;
+  color: #47d147;
+  border-radius: 0;
+}
+
+.gangsta-button:hover {
+  border: 3px solid white !important;
+  background: #47d147 !important;
+  color: white;
+  border-radius: 0;
+}
+
+.gangsta-button:focus {
+  outline: none !important;
+}
