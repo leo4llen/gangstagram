@@ -1,11 +1,9 @@
 import React, { Component, Fragment } from "react";
-import { Router, Route, Switch } from "react-router-dom"; //router
+import { Router, Route, Switch } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import routes from "./routes";
-import { LandingView } from "../views";
+// import { LandingView } from "../views";
 const history = createBrowserHistory();
-
-console.log(routes);
 
 class Routes extends Component {
   constructor(props) {
@@ -16,25 +14,17 @@ class Routes extends Component {
     return (
       <Fragment>
         <Router history={history}>
-          {/* <Switch>
+          <Switch>
             {routes.map((x, i) => {
               return (
                 <Route
                   exact
                   key={"routes" + i}
                   path={x.path}
-                  render={route => {
-                    return <div>{x.component}</div>;
-                  }}
+                  component={x.component}
                 ></Route>
               );
             })}
-          </Switch> */}
-
-          <Switch>
-            <Route exact path="/">
-              <LandingView />
-            </Route>
           </Switch>
         </Router>
       </Fragment>
