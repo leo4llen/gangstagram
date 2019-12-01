@@ -20,7 +20,7 @@ class LandingView extends Component {
 
   handleLandingForm = async formData => {
     this.LoadingBar.continuousStart()
-    let data = await landingServices.login(formData)
+    await landingServices.login(formData)
     this.LoadingBar.complete()
     this.props.history.push('/feed')
   }
@@ -35,7 +35,7 @@ class LandingView extends Component {
         <Container className="login-container">
           <Row className="justify-content-center">
             <Col lg={12}>
-              <h4 className="text-center mb-4">Gangstagram</h4>
+              <h4 className="text-center gangsta-text mb-4">Gangstagram</h4>
             </Col>
             <Col lg={6}>
               <LandingForm handleLandingForm={this.handleLandingForm} />
