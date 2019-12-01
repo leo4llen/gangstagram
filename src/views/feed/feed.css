@@ -1,0 +1,26 @@
+.gangsta-search-box,
+.gangsta-search-box:focus {
+  outline: 2px solid#47d147;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  z-index: 10;
+}
+
+.gangsta-search-box-button,
+.gangsta-search-box-button:focus,
+.gangsta-search-box-button:active {
+  box-shadow: none !important;
+  color: #47d147;
+  outline: 2px solid#47d147;
+  border-radius: 0 !important;
+  background: white;
+  border: 0px;
+  z-index: 1000 !important;
+}
+
+.gangsta-search-box-button:hover {
+  outline: 2px solid#47d147;
+  color: white;
+  background: #47d147;
+  border: 0px;
+}

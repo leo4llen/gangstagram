@@ -1,1 +1,2 @@
-export { LandingView } from "./landing";
+export { LandingView } from './landing'
+export { FeedView } from './feed'

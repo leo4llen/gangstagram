@@ -1,7 +1,8 @@
 /* Basic theming */
 
 body {
-  font-family: "Tomorrow", sans-serif;
+  font-family: 'Tomorrow', sans-serif;
+  color: #808080;
 }
 
 h1,
@@ -9,10 +10,13 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Press Start 2P", cursive !important;
+  font-family: 'Press Start 2P', cursive !important;
 }
 
-.gangsta-button {
+.gangsta-button,
+.gangsta-button:active,
+.gangsta-button:focus {
+  box-shadow: none !important;
   border: 3px solid #47d147 !important;
   background: white !important;
   color: #47d147;
@@ -28,4 +32,17 @@ h5 {
 
 .gangsta-button:focus {
   outline: none !important;
+}
+
+.gangsta-text {
+  font-family: 'Press Start 2P', cursive !important;
+  color: #47d147 !important;
+}
+
+.gangsta-link {
+  color: #47d147;
+}
+
+.gangsta-link:hover {
+  color: #47d147;
 }

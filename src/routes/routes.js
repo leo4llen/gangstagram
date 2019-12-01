@@ -1,11 +1,16 @@
-import { LandingView } from "../views";
-
+import { LandingView } from '../views'
+import { FeedView } from '../views'
 const routes = [
   {
-    path: "/",
+    path: '/',
     component: LandingView,
     exact: true
+  },
+  {
+    path: '/feed',
+    component: FeedView,
+    exact: true
   }
-];
+]
 
-export default routes;
+export default routes
