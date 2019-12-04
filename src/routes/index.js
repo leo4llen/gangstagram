@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Router, Route, Switch } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import routes from './routes'
+import Auth from '../components/auth'
 const history = createBrowserHistory()
 
 class Routes extends Component {
@@ -15,13 +16,20 @@ class Routes extends Component {
         <Router history={history}>
           <Switch>
             {routes.map((x, i) => {
-              return (
+              return x.auth ? (
+                <Auth
+                  exact
+                  key={'routes' + i}
+                  path={x.path}
+                  component={x.component}
+                />
+              ) : (
                 <Route
                   exact
                   key={'routes' + i}
                   path={x.path}
                   component={x.component}
-                ></Route>
+                />
               )
             })}
           </Switch>

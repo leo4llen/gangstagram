@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col'
 import LoadingBar from 'react-top-loading-bar'
 import LandingForm from '../../components/landingForm'
 import { landingServices } from '../../services'
+import Cookies from 'js-cookie'
 
 class LandingView extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class LandingView extends Component {
     this.LoadingBar.continuousStart()
     await landingServices.login(formData)
     this.LoadingBar.complete()
+    Cookies.set('session_token', 'blahblah')
     this.props.history.push('/feed')
   }
   render() {
