@@ -8,6 +8,11 @@
       "config": {
         "distDir": "build"
       }
+    },
+    {
+      "src": "/(.*)",
+      "headers": { "cache-control": "s-maxage=0" },
+      "dest": "/index.html"
     }
   ]
 }
