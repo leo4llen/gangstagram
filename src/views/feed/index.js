@@ -2,13 +2,12 @@ import React, { Component, Fragment } from 'react'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Navbar from 'react-bootstrap/Navbar'
-import InputGroup from 'react-bootstrap/InputGroup'
-import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import Image from 'react-bootstrap/Image'
 import LoadingBar from 'react-top-loading-bar'
 import './feed.css'
 import { feedServices } from '../../services'
+import Nav from '../../components/nav'
 import Feed from '../../components/feed'
 
 class FeedView extends Component {
@@ -41,37 +40,40 @@ class FeedView extends Component {
           height={3}
           color="#47d147"
         />
-        <Navbar bg="light" variant="light">
-          <Container>
-            <Col md={4}>
-              <Navbar.Brand className="gangsta-text">Gangstagram</Navbar.Brand>
-            </Col>
-            <Col md={6} className="d-none d-md-block">
-              <InputGroup size="sm" className="mt-1">
-                <FormControl
-                  className="gangsta-search-box"
-                  aria-label="Search"
-                  aria-describedby="basic-addon2"
-                />
-                <InputGroup.Append>
-                  <Button className="outline-default gangsta-search-box-button">
-                    <i className="fa fa-search"></i>
-                  </Button>
-                </InputGroup.Append>
-              </InputGroup>
-            </Col>
-            <Col className="text-right" md={2}>
-              <i className="fa fa-smile-o mt-2 gangsta-link fa-lg "></i>
-            </Col>
-          </Container>
-        </Navbar>
-
+        <Nav />
         <Container className="feed-container">
           <Row className="mt-4">
             <Col md={9}>
               <Feed feedItems={this.state.feedItems} />
             </Col>
-            <Col md={3}></Col>
+            <Col md={3} className="mt-2">
+              <Row>
+                <Col md={3} sm={4}>
+                  <Image
+                    src="/placeholder_photo_cat.png"
+                    height="50px"
+                    width="auto"
+                    roundedCircle
+                  />
+                </Col>
+                <Col md={9} sm={8}>
+                  <a href="#" className="gangsta-link">
+                    leo4llen
+                  </a>
+                  <p>Leo Allen</p>
+                </Col>
+              </Row>
+
+              <Card>
+                <Card.Body>
+                  <Card.Title>Homies</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
           </Row>
         </Container>
       </Fragment>
